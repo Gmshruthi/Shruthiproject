@@ -1,4 +1,4 @@
-package Git;
-
-public class DomesticAnimal {
-}
+//package Git;
+//
+//public class DomesticAnimal {
+//}

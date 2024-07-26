@@ -2,7 +2,7 @@ package ControlFlowTask;
 
  class CountVowelsNconsant {
      public static void main(String args[]){
-     String fruits="Apple";
+     String fruits="Bannana";
      int i;
      int n=fruits.length();
      int countVowels=0;
