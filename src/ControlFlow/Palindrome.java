@@ -2,7 +2,7 @@ package ControlFlowTask;
 
  class Palindrome {
   public static void main(String args[]) {
-   String[] p = {"racecar", "man", "madam", "question"};
+   String[] p = { "racecar", "man", "madam", "question"};
    String rev;
    char ch;
    int i, j;
