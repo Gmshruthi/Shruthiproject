@@ -10,16 +10,19 @@ public class Employee {
     }
 }
 class Manager extends Employee{
+    public String Department;
 
-    Manager(String name, double salary) {
+    Manager(String name, double salary,String Department) {
         super(name, salary);
+        this.Department=Department;
+
     }
-    String Department="Sales";
+
 
 }
 class Main{
     public static void main(String[] args) {
-        Manager manager=new Manager("Jonathan",45000);
+        Manager manager=new Manager("Jonathan",45000,"Sales");
         System.out.println(manager.name);
         System.out.println(manager.salary);
         System.out.println(manager.Department);
