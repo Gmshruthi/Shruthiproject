@@ -8,7 +8,7 @@ package Git.src.practise.Inheritance;
      protected double deposit(double amount) {
          balance = balance + amount;
          System.out.println("Balamce after deposit: "+balance);
-         return amount;
+         return balance;
      }
 
      protected double withdraw(double amount) {
@@ -20,23 +20,32 @@ package Git.src.practise.Inheritance;
          else{
              System.out.println("no sufficient funds");
          }
-         return amount;
+         return balance;
 
 
      }
 
  }
 
-class SavingsAccount extends BankAccount{
-     float interestRate;
-     public void interest(){
+    class SavingsAccount extends BankAccount{
+     int year;
+     int rateofinterest;
+     double amount;
+     double interest;
+     public double interest(double amount,int year,int rateofinterest){
+         interest=amount*year*rateofinterest/100;
+         System.out.println("Interest:"+interest);
+         return interest;
 
      }
+
     public static void main(String[] args) {
-        BankAccount bankAccount=new BankAccount();
-        System.out.println("AccountNumber:"+bankAccount.accountNumber);
-        bankAccount.deposit(1);
-        bankAccount.withdraw(10);
+        SavingsAccount savingsAccount=new SavingsAccount();
+        System.out.println("AccountNumber:"+savingsAccount.accountNumber);
+        savingsAccount.deposit(110);
+        savingsAccount.withdraw(10);
+        savingsAccount.interest(1000,2,5);
+
 
 
     }
