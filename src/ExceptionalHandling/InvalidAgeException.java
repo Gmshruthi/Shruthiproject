@@ -1,5 +1,7 @@
 package Git.src.ExceptionalHandling;
 
+import java.util.Scanner;
+
 public class InvalidAgeException extends Exception  {
     public InvalidAgeException(){
         super("Not valid");
@@ -12,14 +14,16 @@ public class InvalidAgeException extends Exception  {
         InvalidAgeException invalidAgeException=new InvalidAgeException();
 
         try {
-            int Age=129;
+            Scanner scanner=new Scanner(System.in);
+            int Age= scanner.nextInt();
+            System.out.println("Enter Age:");
             if ((Age>125)) {
 
                 throw new InvalidAgeException();
 
 
             }
-            invalidAgeException.ageEligibility(129);
+            invalidAgeException.ageEligibility(Age);
 
         }
         catch (InvalidAgeException ex){

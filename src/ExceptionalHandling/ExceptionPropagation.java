@@ -1,19 +1,25 @@
 package Git.src.ExceptionalHandling;
 
+import java.util.Scanner;
+
 public class ExceptionPropagation {
-    public static int Squareroot(int number){
+    public int Squareroot(int number){
         System.out.println("Square root of Given Number: "+Math.sqrt(number));
         return number;
     }
 
     public static void main(String[] args) {
+        ExceptionPropagation exceptionPropagation=new ExceptionPropagation();
 
         try {
-            int number=-9;
-            Squareroot(-9);
+            Scanner scanner=new Scanner(System.in);
+            System.out.println("Enter A Number:");
+            int number= scanner.nextInt();
             if(number<0){
                 throw new IllegalArgumentException();
             }
+            exceptionPropagation.Squareroot(number);
+
 
 
         } catch (IllegalArgumentException exc) {
