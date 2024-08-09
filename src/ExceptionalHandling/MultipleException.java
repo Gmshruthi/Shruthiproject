@@ -4,16 +4,11 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MultipleException {
-    public static int Division(int dividend,int divisor){
-
+    public void Division(int dividend,int divisor){
         System.out.println("Answer:"+dividend/divisor);
-        return dividend/divisor;
     }
     public static void main(String[] args) {
         MultipleException multipleException=new MultipleException();
-
-
-
         try{
             Scanner scanner=new Scanner(System.in);
             System.out.println("Enter a dividend to divide:");
@@ -21,9 +16,6 @@ public class MultipleException {
             System.out.println("Enter a divisor to divide:");
             int divisor= scanner.nextInt();
             multipleException.Division(divident,divisor);
-
-
-
         }
         catch(ArithmeticException e){
             System.out.println("Cannot divide by zero");
