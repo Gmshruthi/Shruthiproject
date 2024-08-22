@@ -8,6 +8,7 @@ public class IncreasingOrDecreasingOrder {
         else if(number1>number2 && number2>number3){
             return "In decreasing order";
         }
+
         else{
             return "Neither in increasing nor decreasing order";
         }

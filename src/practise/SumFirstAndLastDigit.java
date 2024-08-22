@@ -27,4 +27,5 @@ public class SumFirstAndLastDigit {
         number=scanner.nextInt();
         System.out.println(sumFirstAndLastDigit.sumOfFirstAndLastDigit(number));
     }
+
     }
