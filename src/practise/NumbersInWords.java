@@ -10,7 +10,7 @@ public class NumbersInWords {
                 "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
         String[] tens = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
         if (number == 0) {
-            System.out.print("zero");
+           System.out.print("zero");
         }
         if (number / 100000 != 0) {
             System.out.print(one[(number / 100000) % 100] + " lakh ");

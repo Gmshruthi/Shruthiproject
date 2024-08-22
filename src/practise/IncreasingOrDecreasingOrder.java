@@ -2,10 +2,10 @@ package Git.src.practise;
 import java.util.Scanner;
 public class IncreasingOrDecreasingOrder {
     public static void increasingOrDecreasingOrder(int number1,int number2,int number3){
-        if(number1<number2 && number2<number3) {
+        if(number1<number2 && number2<number3){
             System.out.println("In increasing order");
         }
-        else if(number1>number2 && number2>number3) {
+        else if(number1>number2 && number2>number3){
             System.out.println("In decreasing order");
         }
         else{
