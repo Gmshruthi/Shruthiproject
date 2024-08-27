@@ -9,10 +9,7 @@ public class Person extends Contact {
     public LocalDate DateOfBirth=LocalDate.of(1990, 5, 15);
     public int calculateAge(){
         LocalDate curDate = LocalDate.now();
-        if ((DateOfBirth != null) && (curDate != null))
-        {
-            return Period.between(DateOfBirth, curDate).getYears();
-        }
-        return 0;
+        Period period = Period.between(DateOfBirth, LocalDate.now());
+        return period.getYears();
     }
 }
