@@ -3,13 +3,15 @@ package Git.src.practise.Inheritance;
 import Git.src.practise.Dealer;
 
 public class Shop extends Dealer {
-    public Shop(){
-        super.boostMRP=100;
-        super.boostSellingPrice=98;
+    public int boostMRP = 100;
+    public int boostSellingPrice = 98;
+
+    public Shop(int boostMRP) {
+        super(boostMRP);
+        System.out.println(this.boostMRP);
+        System.out.println(super.boostMRP);
     }
     public static void main(String[] args) {
-        Shop shop=new Shop();
-        Dealer dealer=new Dealer();
-        System.out.println(shop.boostMRP);
+        Shop shop = new Shop(110);
     }
 }
