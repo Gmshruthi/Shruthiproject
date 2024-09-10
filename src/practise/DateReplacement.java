@@ -12,6 +12,7 @@ public class DateReplacement{
         Matcher matcher=pattern.matcher(text);
         return matcher.replaceAll(replaceRegex);
     }
+
     public static void main(String[] args) {
         DateReplacement dateReplacement=new DateReplacement();
         Scanner scanner=new Scanner(System.in);
