@@ -6,11 +6,11 @@ import java.util.regex.Pattern;
 
 class ValidEmailId {
     public static boolean isValidEmail(String email) {
-        String Regex = "^([a-zA-Z]+)@(.+)\\.(.+)$";
+        String Regex="^([a-zA-Z]+)@(.+)\\.(.+)$";
         if(email.matches(Regex))
             return true;
         else
-            return  false;
+            return false;
     }
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
