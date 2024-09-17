@@ -5,16 +5,19 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 class ValidEmailId {
-    public static boolean isValidEmail(String email) {
-        String Regex="^([a-zA-Z]+)@(.+)\\.(.+)$";
-        if(email.matches(Regex))
-            return true;
-        else
-            return false;
+        public boolean isValidEmail(String email) {
+            String regex = "^[^@]+@[^@]+\\.[^@\\.]+$";
+            Pattern pattern = Pattern.compile(regex);
+            Matcher matcher = pattern.matcher(email);
+            return matcher.matches();
+        }
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            ValidEmailId emailRegex = new ValidEmailId();
+            String email = scanner.next();
+            if (emailRegex.isValidEmail(email)) {
+                System.out.println("Valid");
+            } else System.out.println("Invalid");
+        }
     }
-    public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
-        String email= scanner.next();
-        System.out.println(isValidEmail(email));
-    }
-}
+

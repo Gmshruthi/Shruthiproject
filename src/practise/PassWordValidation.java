@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class PassWordValidation {
-    static boolean isValidPassword(String input){
+     boolean isValidPassword(String input){
         String Regex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[\\W_]).{12}$";
         Pattern pattern= Pattern.compile(Regex);
         Matcher matcher= pattern.matcher(input);
@@ -24,10 +24,15 @@ public class PassWordValidation {
                 return true;
         }
         return false;
+
     }
     public static void main(String[] args) {
+         PassWordValidation passWordValidation=new PassWordValidation();
         Scanner scanner=new Scanner(System.in);
         String input= scanner.next();
-        System.out.println(isValidPassword(input));
+        if(passWordValidation.isValidPassword(input)){
+            System.out.println("Valid");
+        }
+        else System.out.println("Invalid");
     }
 }

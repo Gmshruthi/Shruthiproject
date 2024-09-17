@@ -4,23 +4,19 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class DateReplacement{
-    public String replaceDates(String text){
-        String dateRegex="(\\d{2})/(\\d{2})/(\\d{4})";
+public class DateReplacement {
+    String replaceDates(String text) {
+        String dateRegex = "(\\d{2})/(\\d{2})/(\\d{4})";
         String replaceRegex = "$3-$2-$1";
-        Pattern pattern=Pattern.compile(dateRegex);
-        Matcher matcher=pattern.matcher(text);
+        Pattern pattern = Pattern.compile(dateRegex);
+        Matcher matcher = pattern.matcher(text);
         return matcher.replaceAll(replaceRegex);
     }
-
     public static void main(String[] args) {
-        DateReplacement dateReplacement=new DateReplacement();
-        Scanner scanner=new Scanner(System.in);
-        String text= scanner.nextLine();
-        System.out.println(dateReplacement.replaceDates(text));
+        DateReplacement dateRegex = new DateReplacement();
+        System.out.println(dateRegex.replaceDates("The event is scheduled for 12/09/2024 and another one for 25/12/2024"));
     }
 }
-
 
 
 
