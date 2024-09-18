@@ -13,7 +13,7 @@ public class AppendElementToHashSet {
         int element= scanner.nextInt();
         if(element>4){
             set.add(element);
-            System.out.println("original set:"+set);
+            System.out.println("After append set:"+set);
         }
         else
             System.out.println("Enter greater than 4");
