@@ -14,7 +14,7 @@ public class AppendElementToHashSet {
         if (element > 4) {
             set.add(element);
             System.out.println("After append set:" + set);
-        } else
+        }else
             System.out.println("Enter greater than 4");
     }
 }
