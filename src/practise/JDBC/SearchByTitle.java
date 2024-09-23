@@ -11,9 +11,9 @@ public class SearchByTitle{
         Scanner scanner=new Scanner(System.in);
         System.out.println("Enter title:");
         String inputTitle=scanner.next();
+        String sql="SELECT * FROM books WHERE title=?";
         try {
             Connection connection = DriverManager.getConnection(url, user, password);
-            String sql="SELECT * FROM books WHERE title=?";
             PreparedStatement preparedStatement= connection.prepareStatement(sql);
             preparedStatement.setString(1,inputTitle);
             ResultSet resultSet= preparedStatement.executeQuery();

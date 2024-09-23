@@ -11,9 +11,9 @@ public class FilterRecords{
         Scanner scanner=new Scanner(System.in);
         System.out.println("Enter author:");
         String author=scanner.next();
+        String sql="SELECT title FROM books WHERE Author=?";
         try {
             Connection connection = DriverManager.getConnection(url, user, password);
-            String sql="SELECT title FROM books WHERE Author=?";
             PreparedStatement preparedStatement= connection.prepareStatement(sql);
             preparedStatement.setString(1,author);
             ResultSet resultSet= preparedStatement.executeQuery();

@@ -11,9 +11,9 @@ public class DeleteRecord{
         System.out.println("Enter  id:");
         Scanner scanner=new Scanner(System.in);
         int id= scanner.nextInt();
+        String sql= "DELETE FROM books WHERE id=?";
         try {
             Connection connection = DriverManager.getConnection(url, user, password);
-            String sql= "DELETE FROM books WHERE id=?";
             PreparedStatement preparedStatement= connection.prepareStatement(sql);
             preparedStatement.setInt(1,id);
             preparedStatement.execute();

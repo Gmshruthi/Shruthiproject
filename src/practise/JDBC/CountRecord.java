@@ -7,10 +7,9 @@ public class CountRecord{
         String url = "jdbc:sqlserver://192.168.0.49\\HEALNET;databaseName=Intern_ShruthiGM;encrypt=true;trustServerCertificate=true";
         String user = "shruthigm";
         String password = "Shruthi16";
-
+        String sql="SELECT COUNT(*) AS NumberOfRecords FROM books";
         try {
             Connection connection = DriverManager.getConnection(url, user, password);
-            String sql="SELECT COUNT(*) AS NumberOfRecords FROM books";
             PreparedStatement preparedStatement= connection.prepareStatement(sql);
             ResultSet resultSet= preparedStatement.executeQuery();
             resultSet.next();

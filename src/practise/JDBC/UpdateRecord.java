@@ -13,9 +13,9 @@ public class UpdateRecord{
         int id= scanner.nextInt();
         System.out.println("Enter new title:");
         String newTitle=scanner.next();
+        String sql="UPDATE books set title=? where id=?";
         try {
             Connection connection = DriverManager.getConnection(url, user, password);
-            String sql="UPDATE books set title=? where id=?";
             PreparedStatement preparedStatement= connection.prepareStatement(sql);
             preparedStatement.setInt(2,id);
             preparedStatement.setString(1,newTitle);
