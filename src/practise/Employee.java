@@ -1,5 +1,4 @@
 package Git.src.practise;
-
 public class Employee {
      String employeeId;
      String firstName;
@@ -10,7 +9,6 @@ public class Employee {
      String emailAddress;
      String phoneNumber;
      public Address address;
-
     public Employee(String employeeId,String firstName,String lastName
     ,String middleName,String dob,String gender,String emailAddress,String phoneNumber
     ,Address address){
@@ -23,7 +21,6 @@ public class Employee {
         this.emailAddress=emailAddress;
         this.phoneNumber=phoneNumber;
         this.address=address;
-
     }
     @Override
     public String toString(){
@@ -31,7 +28,7 @@ public class Employee {
     }
 
     public static void main(String[] args) {
-        Address address=new Address("VGN MAHALAKSHMI NAGAR","TVK","091");
+        Address address=new Address("VGN MAHALAKSHMI NAGAR","TVK","chennai","9991","Tamil Nadu");
         Employee employee=new Employee("121","G","Mohan","guru","10/5/2001",
                 "male","gmnmohan@gmail.com","9999966666",address);
         System.out.println(employee);
